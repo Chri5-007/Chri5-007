@@ -29,16 +29,19 @@
 * 🖥️ Computer Networks
 * 🗄️ Database Management
 * 🚀 Learning new technologies
+
+🚀 Projects
+
 * 🌐 [Portfolio](https://chri5-007.github.io/PORTFOLIO/)
 
 📊 GitHub Statistics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=kobs-dev&show_icons=true&theme=midnight-purple&hide_border=true&count_private=true" height="165" alt="Statistiques GitHub de kobs-dev" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kobs-dev&layout=compact&theme=midnight-purple&hide_border=true" height="165" alt="Langages les plus utilisés de kobs-dev" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Chri5-007&show_icons=true&theme=midnight-purple&hide_border=true&count_private=true" height="165" alt="Statistiques GitHub de Chri5-007" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chri5-007&layout=compact&theme=midnight-purple&hide_border=true" height="165" alt="Langages les plus utilisés de Chri5-007" />
 </p>
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=kobs-dev&theme=midnight-purple&hide_border=true" width="70%" alt="Série de contributions GitHub de kobs-dev" />
+  <img src="https://streak-stats.demolab.com?user=Chri5-007&theme=midnight-purple&hide_border=true" width="70%" alt="Série de contributions GitHub de Chri5-007" />
 </p>
 
 ⚡ A Little More About Me
