@@ -1,7 +1,7 @@
 👋 Hi, I’m Chris-Roland!
 
 <h3 align="center">
-  💜 Computer Science Student | Aspiring Web Developer
+  💜 Computer Science Student | Aspiring SOC Analyst
 </h3>
 <p align="center">
   <img src="./banner.svg" width="100%" alt="Bannière animée CHRIS N'CHO" />
