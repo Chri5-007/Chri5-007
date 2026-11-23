@@ -40,11 +40,13 @@
       <feColorMatrix type="saturate" values="0"/>
     </filter>
     <path id="blade" d="M0 0 Q5 -22 -2 -44" fill="none" stroke-width="2" stroke-linecap="round"/>
+    <path id="bladeSm" d="M0 0 Q4 -14 -1 -26" fill="none" stroke-width="1.6" stroke-linecap="round"/>
   </defs>
   <style>
     .sway { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 4s ease-in-out infinite alternate; }
     .s2 { animation-duration: 5.2s; animation-delay: -1.5s; }
     .s3 { animation-duration: 3.1s; animation-delay: -2.2s; }
+    .s4 { animation-duration: 4.6s; animation-delay: -0.8s; }
     @keyframes sway { from { transform: skewX(-9deg); } to { transform: skewX(7deg); } }
     .cloud { animation: drift 38s ease-in-out infinite alternate; }
     .c2 { animation-duration: 52s; animation-delay: -12s; }
@@ -72,7 +74,6 @@
   <g fill="#1e1020">
     <path d="M700 198 Q712 190 724 196 L724 204 L700 204Z"/>
     <path d="M770 170 Q800 160 830 170 L832 176 L768 176Z"/>
-    <path d="M745 160 Q760 146 780 150 Q800 146 812 160 L822 166 L736 166Z" opacity="0"/>
     <rect x="744" y="176" width="70" height="26" fill="#1e1020"/>
     <path d="M722 178 Q780 162 838 178 L850 188 L710 188Z" fill="#1e1020"/>
     <path d="M800 146 Q812 138 826 146 L830 150 L796 150Z" fill="#1e1020"/>
@@ -82,18 +83,30 @@
     <path d="M900 205 Q908 198 916 205 L918 215 L898 215Z"/>
   </g>
 
-  <path d="M0 232 Q200 214 420 230 T860 226 T1200 232 L1200 300 L0 300Z" fill="url(#ground)"/>
-
-  <g fill="#0a0508">
-    <rect x="0" y="0" width="0" height="0"/>
+  <g class="sway s4" stroke="#7a4a5a">
+    <use href="#bladeSm" transform="translate(20,240) scale(0.9)"/>
+    <use href="#bladeSm" transform="translate(90,236) scale(1)"/>
+    <use href="#bladeSm" transform="translate(180,232) scale(0.8)"/>
+    <use href="#bladeSm" transform="translate(300,228) scale(0.9)"/>
+    <use href="#bladeSm" transform="translate(470,226) scale(1)"/>
+    <use href="#bladeSm" transform="translate(600,230) scale(0.8)"/>
+    <use href="#bladeSm" transform="translate(760,224) scale(0.9)"/>
+    <use href="#bladeSm" transform="translate(1000,228) scale(1)"/>
+    <use href="#bladeSm" transform="translate(1130,234) scale(0.8)"/>
   </g>
+
+  <path d="M0 232 Q200 214 420 230 T860 226 T1200 232 L1200 300 L0 300Z" fill="url(#ground)"/>
 
   <g class="sway" stroke="#c28c4a">
     <use href="#blade" transform="translate(40,300) scale(1.1)"/>
     <use href="#blade" transform="translate(56,300) scale(0.8)"/>
     <use href="#blade" transform="translate(120,300) scale(1.2)"/>
+    <use href="#blade" transform="translate(150,300) scale(0.9)"/>
+    <use href="#blade" transform="translate(260,300) scale(1)"/>
     <use href="#blade" transform="translate(410,300) scale(1)"/>
     <use href="#blade" transform="translate(440,300) scale(0.7)"/>
+    <use href="#blade" transform="translate(560,300) scale(1.1)"/>
+    <use href="#blade" transform="translate(700,300) scale(0.9)"/>
     <use href="#blade" transform="translate(1040,300) scale(1.1)"/>
     <use href="#blade" transform="translate(1090,300) scale(0.9)"/>
     <use href="#blade" transform="translate(1150,300) scale(1.2)"/>
@@ -101,17 +114,23 @@
   <g class="sway s2" stroke="#d9a45c">
     <use href="#blade" transform="translate(200,300) scale(1.3)"/>
     <use href="#blade" transform="translate(228,300) scale(0.9)"/>
+    <use href="#blade" transform="translate(340,300) scale(1)"/>
     <use href="#blade" transform="translate(520,300) scale(1)"/>
+    <use href="#blade" transform="translate(620,300) scale(1.2)"/>
     <use href="#blade" transform="translate(760,300) scale(1.2)"/>
     <use href="#blade" transform="translate(790,300) scale(0.8)"/>
     <use href="#blade" transform="translate(980,300) scale(1.1)"/>
+    <use href="#blade" transform="translate(1110,300) scale(0.9)"/>
   </g>
   <g class="sway s3" stroke="#b97d42">
     <use href="#blade" transform="translate(300,300) scale(1)"/>
     <use href="#blade" transform="translate(330,300) scale(1.4)"/>
+    <use href="#blade" transform="translate(480,300) scale(1.1)"/>
     <use href="#blade" transform="translate(640,300) scale(0.9)"/>
+    <use href="#blade" transform="translate(830,300) scale(1)"/>
     <use href="#blade" transform="translate(880,300) scale(1.2)"/>
     <use href="#blade" transform="translate(910,300) scale(0.8)"/>
+    <use href="#blade" transform="translate(1180,300) scale(1)"/>
   </g>
 
   <ellipse class="leaf" cx="150" cy="0" rx="4" ry="2" fill="#f6b97a"/>
