@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a0a2e"/>
+      <stop offset="0.6" stop-color="#6A0DAD"/>
+      <stop offset="1" stop-color="#e07a3f"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .sway { transform-box: fill-box; transform-origin: bottom center; animation: sway 4s ease-in-out infinite alternate; }
+    .s2 { animation-duration: 5.5s; animation-delay: -1s; }
+    .s3 { animation-duration: 3.2s; animation-delay: -2s; }
+    @keyframes sway { from { transform: skewX(-6deg); } to { transform: skewX(6deg); } }
+    .leaf { animation: fall 9s linear infinite; }
+    @keyframes fall { 0% { transform: translate(0,-20px) rotate(0deg); } 100% { transform: translate(80px,320px) rotate(360deg); } }
+    .cloud { animation: drift 30s linear infinite alternate; }
+    @keyframes drift { from { transform: translateX(-40px); } to { transform: translateX(40px); } }
+  </style>
+
+  <rect width="1200" height="300" fill="url(#sky)"/>
+  <circle cx="900" cy="120" r="60" fill="#ffb347" opacity="0.9"/>
+  <ellipse class="cloud" cx="300" cy="80" rx="120" ry="18" fill="#ffffff" opacity="0.12"/>
+  <ellipse class="cloud" cx="700" cy="50" rx="160" ry="14" fill="#ffffff" opacity="0.1"/>
+  <path d="M0 220 L150 120 L300 200 L450 100 L620 210 L800 110 L980 200 L1200 130 L1200 300 L0 300Z" fill="#2d1450" opacity="0.8"/>
+  <path d="M0 250 Q200 190 400 240 T800 230 T1200 240 L1200 300 L0 300Z" fill="#1a0a2e"/>
+
+  <g class="sway">
+    <path d="M60 300 Q65 260 80 230" stroke="#c9a227" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M120 300 Q110 255 125 225" stroke="#c9a227" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M400 300 Q410 250 395 220" stroke="#c9a227" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M1080 300 Q1070 260 1090 235" stroke="#c9a227" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <g class="sway s2">
+    <path d="M200 300 Q210 250 195 215" stroke="#e07a3f" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M520 300 Q530 255 515 222" stroke="#e07a3f" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M800 300 Q790 258 808 228" stroke="#e07a3f" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <g class="sway s3">
+    <path d="M300 300 Q308 262 292 235" stroke="#c9a227" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M650 300 Q660 252 645 218" stroke="#c9a227" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M950 300 Q940 258 958 232" stroke="#c9a227" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <ellipse class="leaf" cx="150" cy="0" rx="5" ry="3" fill="#e8833a"/>
+  <ellipse class="leaf" style="animation-delay:-3s" cx="500" cy="0" rx="5" ry="3" fill="#e8833a"/>
+  <ellipse class="leaf" style="animation-delay:-6s" cx="850" cy="0" rx="5" ry="3" fill="#ffb347"/>
+
+  <text x="60" y="150" font-family="Georgia, serif" font-size="56" fill="#ffffff" letter-spacing="6">CHRIS N'CHO</text>
+</svg>
