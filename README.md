@@ -29,9 +29,6 @@
 * 🖥️ Computer Networks
 * 🗄️ Database Management
 * 🚀 Learning new technologies
-
-🚀 Projects
-
 * 🌐 [Portfolio](https://chri5-007.github.io/PORTFOLIO/)
 
 📊 GitHub Statistics
