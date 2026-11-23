@@ -1,64 +1,126 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1c2538"/>
-      <stop offset="0.55" stop-color="#4a3a5a"/>
-      <stop offset="1" stop-color="#d9a27a"/>
+      <stop offset="0" stop-color="#14162b"/>
+      <stop offset="0.35" stop-color="#3b2c4f"/>
+      <stop offset="0.65" stop-color="#a0505a"/>
+      <stop offset="0.9" stop-color="#e2895a"/>
+      <stop offset="1" stop-color="#f5c284"/>
     </linearGradient>
+    <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff1d0" stop-opacity="0.9"/>
+      <stop offset="0.4" stop-color="#ffc878" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffb060" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="farHill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a5470"/>
+      <stop offset="1" stop-color="#b87a72"/>
+    </linearGradient>
+    <linearGradient id="midHill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a2c4a"/>
+      <stop offset="1" stop-color="#6e3b4e"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7d8b0" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#f7d8b0" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f7d8b0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1a24"/>
+      <stop offset="1" stop-color="#0d070c"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="cloudBlur" x="-30%" y="-100%" width="160%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <path id="blade" d="M0 0 Q5 -22 -2 -44" fill="none" stroke-width="2" stroke-linecap="round"/>
   </defs>
   <style>
-    .mist { animation: drift 25s linear infinite alternate; }
-    .m2 { animation-duration: 40s; animation-delay: -10s; }
-    @keyframes drift { from { transform: translateX(-50px); } to { transform: translateX(50px); } }
-    .petal { animation: fall 9s linear infinite; }
-    .p2 { animation-delay: -3s; }
-    .p3 { animation-delay: -6s; }
-    @keyframes fall { 0% { transform: translate(0,-20px) rotate(0deg); } 100% { transform: translate(90px,320px) rotate(360deg); } }
+    .sway { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 4s ease-in-out infinite alternate; }
+    .s2 { animation-duration: 5.2s; animation-delay: -1.5s; }
+    .s3 { animation-duration: 3.1s; animation-delay: -2.2s; }
+    @keyframes sway { from { transform: skewX(-9deg); } to { transform: skewX(7deg); } }
+    .cloud { animation: drift 38s ease-in-out infinite alternate; }
+    .c2 { animation-duration: 52s; animation-delay: -12s; }
+    @keyframes drift { from { transform: translateX(-35px); } to { transform: translateX(35px); } }
+    .mistband { animation: drift 45s ease-in-out infinite alternate; }
+    .leaf { animation: fall 10s linear infinite; }
+    .l2 { animation-delay: -3.3s; }
+    .l3 { animation-delay: -6.6s; }
+    @keyframes fall { 0% { transform: translate(0,-20px) rotate(0deg); opacity: 0; } 10% { opacity: 0.9; } 90% { opacity: 0.9; } 100% { transform: translate(110px,320px) rotate(400deg); opacity: 0; } }
   </style>
 
   <rect width="1200" height="300" fill="url(#sky)"/>
-  <circle cx="980" cy="110" r="34" fill="#fbe9d0" opacity="0.9"/>
+  <circle cx="880" cy="150" r="170" fill="url(#sunGlow)"/>
+  <circle cx="880" cy="150" r="34" fill="#fff4dc"/>
 
-  <path d="M0 175 L120 120 L240 165 L380 110 L520 170 L660 130 L800 175 L940 135 L1080 170 L1200 140 L1200 300 L0 300Z" fill="#5b6b8a" opacity="0.5"/>
-  <ellipse class="mist" cx="300" cy="170" rx="260" ry="12" fill="#ffffff" opacity="0.12"/>
-  <ellipse class="mist m2" cx="850" cy="185" rx="300" ry="10" fill="#ffffff" opacity="0.1"/>
+  <ellipse class="cloud" cx="260" cy="70" rx="200" ry="14" fill="#f3c9b0" opacity="0.25" filter="url(#cloudBlur)"/>
+  <ellipse class="cloud c2" cx="700" cy="95" rx="260" ry="10" fill="#f8d6bc" opacity="0.2" filter="url(#cloudBlur)"/>
 
-  <g>
-    <path d="M150 215 Q160 160 140 115" stroke="#3b2a22" stroke-width="8" fill="none" stroke-linecap="round"/>
-    <ellipse cx="120" cy="112" rx="50" ry="14" fill="#2f4a3a"/>
-    <ellipse cx="160" cy="97" rx="40" ry="12" fill="#2f4a3a"/>
-    <ellipse cx="132" cy="82" rx="30" ry="9" fill="#2f4a3a"/>
+  <path d="M0 170 L90 128 L160 150 L250 112 L340 148 L430 118 L520 152 L610 124 L700 160 L790 130 L880 156 L970 118 L1060 150 L1140 126 L1200 146 L1200 300 L0 300Z" fill="url(#farHill)" opacity="0.85" filter="url(#soft)"/>
+
+  <rect x="0" y="150" width="1200" height="40" fill="url(#mist)" class="mistband"/>
+
+  <path d="M0 200 Q120 170 240 190 T480 186 T720 196 T960 180 T1200 192 L1200 300 L0 300Z" fill="url(#midHill)" filter="url(#soft)"/>
+
+  <g fill="#1e1020">
+    <path d="M700 198 Q712 190 724 196 L724 204 L700 204Z"/>
+    <path d="M770 170 Q800 160 830 170 L832 176 L768 176Z"/>
+    <path d="M745 160 Q760 146 780 150 Q800 146 812 160 L822 166 L736 166Z" opacity="0"/>
+    <rect x="744" y="176" width="70" height="26" fill="#1e1020"/>
+    <path d="M722 178 Q780 162 838 178 L850 188 L710 188Z" fill="#1e1020"/>
+    <path d="M800 146 Q812 138 826 146 L830 150 L796 150Z" fill="#1e1020"/>
+    <rect x="752" y="186" width="8" height="18" fill="#1e1020"/>
+    <rect x="800" y="186" width="8" height="18" fill="#1e1020"/>
+    <rect x="757" y="190" width="36" height="14" fill="#f0a060" opacity="0.5"/>
+    <path d="M900 205 Q908 198 916 205 L918 215 L898 215Z"/>
   </g>
 
-  <rect x="700" y="210" width="400" height="14" fill="#3b2a22"/>
-  <rect x="760" y="160" width="320" height="52" fill="#5a3a2a"/>
-  <path d="M770 120 Q900 90 1030 120 L1060 150 L740 150 Z" fill="#2b1d18"/>
-  <rect x="880" y="80" width="40" height="12" fill="#2b1d18"/>
-  <path d="M700 170 Q900 140 1100 170 L1110 182 L690 182 Z" fill="#2b1d18"/>
-  <rect x="770" y="170" width="8" height="40" fill="#3b2a22"/>
-  <rect x="1022" y="170" width="8" height="40" fill="#3b2a22"/>
-  <rect x="870" y="175" width="60" height="35" fill="#1a100c"/>
-  <rect x="790" y="178" width="50" height="26" fill="#1a100c" opacity="0.8"/>
-  <rect x="960" y="178" width="50" height="26" fill="#1a100c" opacity="0.8"/>
+  <path d="M0 232 Q200 214 420 230 T860 226 T1200 232 L1200 300 L0 300Z" fill="url(#ground)"/>
 
-  <rect x="0" y="224" width="1200" height="76" fill="#d9cdb8"/>
-  <g stroke="#bfb29a" stroke-width="1.5" fill="none" opacity="0.7">
-    <path d="M0 236 Q300 230 600 238 T1200 236"/>
-    <path d="M0 252 Q300 246 600 254 T1200 252"/>
-    <path d="M0 268 Q300 262 600 270 T1200 268"/>
-    <path d="M0 284 Q300 278 600 286 T1200 284"/>
+  <g fill="#0a0508">
+    <rect x="0" y="0" width="0" height="0"/>
   </g>
 
-  <ellipse cx="250" cy="252" rx="60" ry="26" fill="#4a4a52"/>
-  <ellipse cx="250" cy="236" rx="40" ry="8" fill="#4f6b3a" opacity="0.85"/>
-  <ellipse cx="380" cy="268" rx="38" ry="16" fill="#3a3a42"/>
-  <ellipse cx="560" cy="248" rx="45" ry="20" fill="#55555d"/>
-  <ellipse cx="560" cy="236" rx="28" ry="6" fill="#4f6b3a" opacity="0.85"/>
+  <g class="sway" stroke="#c28c4a">
+    <use href="#blade" transform="translate(40,300) scale(1.1)"/>
+    <use href="#blade" transform="translate(56,300) scale(0.8)"/>
+    <use href="#blade" transform="translate(120,300) scale(1.2)"/>
+    <use href="#blade" transform="translate(410,300) scale(1)"/>
+    <use href="#blade" transform="translate(440,300) scale(0.7)"/>
+    <use href="#blade" transform="translate(1040,300) scale(1.1)"/>
+    <use href="#blade" transform="translate(1090,300) scale(0.9)"/>
+    <use href="#blade" transform="translate(1150,300) scale(1.2)"/>
+  </g>
+  <g class="sway s2" stroke="#d9a45c">
+    <use href="#blade" transform="translate(200,300) scale(1.3)"/>
+    <use href="#blade" transform="translate(228,300) scale(0.9)"/>
+    <use href="#blade" transform="translate(520,300) scale(1)"/>
+    <use href="#blade" transform="translate(760,300) scale(1.2)"/>
+    <use href="#blade" transform="translate(790,300) scale(0.8)"/>
+    <use href="#blade" transform="translate(980,300) scale(1.1)"/>
+  </g>
+  <g class="sway s3" stroke="#b97d42">
+    <use href="#blade" transform="translate(300,300) scale(1)"/>
+    <use href="#blade" transform="translate(330,300) scale(1.4)"/>
+    <use href="#blade" transform="translate(640,300) scale(0.9)"/>
+    <use href="#blade" transform="translate(880,300) scale(1.2)"/>
+    <use href="#blade" transform="translate(910,300) scale(0.8)"/>
+  </g>
 
-  <ellipse class="petal" cx="200" cy="0" rx="5" ry="2.5" fill="#f6c6d0"/>
-  <ellipse class="petal p2" cx="520" cy="0" rx="5" ry="2.5" fill="#f6c6d0"/>
-  <ellipse class="petal p3" cx="900" cy="0" rx="5" ry="2.5" fill="#fbe9d0"/>
+  <ellipse class="leaf" cx="150" cy="0" rx="4" ry="2" fill="#f6b97a"/>
+  <ellipse class="leaf l2" cx="560" cy="0" rx="4" ry="2" fill="#e8956a"/>
+  <ellipse class="leaf l3" cx="990" cy="0" rx="4" ry="2" fill="#fbd6a0"/>
 
-  <text x="60" y="150" font-family="Georgia, serif" font-size="56" fill="#fdf3e3" letter-spacing="6">CHRIS N'CHO</text>
-  <text x="62" y="182" font-family="Georgia, serif" font-size="15" fill="#f3d3a8" letter-spacing="4">COMPUTER SCIENCE STUDENT</text>
+  <rect width="1200" height="300" filter="url(#grain)" opacity="0.07" style="mix-blend-mode:overlay"/>
+
+  <text x="62" y="152" font-family="Georgia, serif" font-size="56" fill="#000" opacity="0.35" letter-spacing="6">CHRIS N'CHO</text>
+  <text x="60" y="150" font-family="Georgia, serif" font-size="56" fill="#fff6e6" letter-spacing="6">CHRIS N'CHO</text>
+  <text x="60" y="180" font-family="Georgia, serif" font-size="15" fill="#f6d3a0" letter-spacing="4">COMPUTER SCIENCE STUDENT</text>
 </svg>
