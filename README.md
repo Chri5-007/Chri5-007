@@ -1,11 +1,10 @@
-
 👋 Hi, I’m Chris-Roland!
 
 <h3 align="center">
   💜 Computer Science Student | Aspiring Web Developer
 </h3>
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=6A0DAD&height=180&section=header&text=CHRIS-ROLAND&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=35" width="100%" alt="Bannière CHRIS-ROLAND" />
+  <img src="https://capsule-render.vercel.app/api?type=slice&color=6A0DAD&height=180&section=header&text=CHRIS%20N%27CHO&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=35" width="100%" alt="Bannière CHRIS N'CHO" />
 </p>
 
 🧑‍💻 About Me
